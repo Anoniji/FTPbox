@@ -35,7 +35,7 @@ jobs:
 
     - name: Restore NuGet packages
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: nuget restore ${{env.SOLUTION_FILE_PATH}} -PackagesDirectory
+      run: nuget restore ${{env.SOLUTION_FILE_PATH}} -PackagesDirectory ${{env.GITHUB_WORKSPACE}}
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
